@@ -1,0 +1,194 @@
+/* ========================================ToDo Item========================================== */
+.singWrapper{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    border-bottom: 1px solid cadetblue;
+    padding: 5px 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.singStyle p{
+    color: #00ffff;
+    opacity: 0.3;
+    text-decoration: line-through;
+}
+
+.singWrapper > p{
+    color: paleturquoise;
+    margin: 0;
+    padding: 10px 10px;
+}
+
+.singWrapper i{
+    cursor: pointer;
+}
+
+.singWrapper .icons{
+    cursor: pointer;
+    color: greenyellow;
+}
+
+
+/* ========================================Title Login====================================== */
+.titleLogin{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0px;
+    margin: 10px auto;
+}
+
+.text{
+    color: black;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.text a{
+    color: black;
+    text-decoration: none;
+}
+
+.logo{
+    width: 80%;
+    vertical-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.button{
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.btn{
+    border: 1px solid rgba(219, 212, 212, 0.8);
+    padding: 6px 18px;
+    background-color: transparent;
+    cursor: pointer;
+}
+/* ========================================Form Signin====================================== */
+.formSignin{
+    width: 33%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.formSignin h1{
+    margin-bottom: 100px;
+    font-size: 3rem;
+
+}
+
+.inputStyle{
+    min-width: 70%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #e6e1e1;
+    cursor: pointer;
+}
+
+.Btn{
+    background-color: rgb(16, 185, 16);
+    cursor: pointer;
+    color: white;
+    border: none;
+    text-align: center;
+}
+
+.formSignin .text{
+    color: #8d8585;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.remember{
+    margin: 30px auto;
+    text-align: center;
+}
+
+.remember .check{
+    margin-top: 30px;
+}
+
+.remember .check a{
+    color: black;
+    margin: 10px;
+}
+/* =====================================Menu With Icon==================================== */
+.menu{
+    width: 180px;
+    height: 100px;
+    position: relative;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.menu:hover{
+    border-top: 2px solid #8CDC52;
+    border-bottom: 2px solid #d0d0d0;
+    background-color: white;
+}
+
+.menu:hover i{
+    color: #8CDC52;
+}
+
+.submenu{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,0%);
+}
+
+.submenu p{
+    color: #8e8e8e;
+    font-size: 0.8rem;
+}
+
+.submenu i{
+    color: #8e8e8e;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-105%);
+    font-size: 3rem;
+}
+
+/* ===============================================Traffic-Light========================================= */
+.TrafficLight{
+    display: flex;
+    flex-direction: column;
+}
+
+.TrafficLight .buld{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 10px;
+    opacity: 0.2;
+}
+
+.TrafficLight .buld.active{
+    opacity: 1;
+}
+
+.TrafficLight .buld.red{
+    background-color: red;
+}
+
+.TrafficLight .buld.orange{
+    background-color: orange;
+}
+
+.TrafficLight .buld.green{
+    background-color: green;
+}

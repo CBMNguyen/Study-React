@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite  1s linear;
   }
 }
 
@@ -35,4 +35,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* ===============================================Menu==================================== */
+.menu{
+  display: inline-block;
+}
+/* ===============================================Sings=================================== */
+.sings{
+  min-width: 500px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 15px 2px darkslategrey;
+}
+
+.singHeader{
+  text-align: left;
+  border-bottom: 1px solid cadetblue;
+  padding: 0 0 10px;
+}
+
+.singHeader i{
+  font-size: 24px;
+  padding-left: 12px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+.singHeader input{
+  font-size: 16px;
+  color: whitesmoke;
+  width: 85%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.singHeader input:focus{
+  background-color: #282b33;
 }
