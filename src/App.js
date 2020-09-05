@@ -6,6 +6,7 @@ import HeaderLogin from './components/HeaderLogin';
 import LoginForm from './components/LoginForm';
 import MenuIcon from './components/MenuIcon';
 import TrafficLight from './components/TrafficLight';
+import Accordion from './components/Accordion';
 
 const RED = 0;
 const ORANGE = 1;
@@ -17,7 +18,8 @@ class App extends Component {
 
     this.onKeyUp = this.onKeyUp.bind(this);
     this.onChange = this.onChange.bind(this);
-
+    this.onAccordionClick =this.onAccordionClick.bind(this);
+// ========================================DATA=========================================
     this.menu = [
       {name: "HOME", icon: "zmdi zmdi-home"},
       {name: "DEALS", icon: "zmdi zmdi-card-giftcard"},
@@ -25,8 +27,6 @@ class App extends Component {
       {name: "SETTINGS", icon: "zmdi zmdi-settings"}
     ];
 
-    
-  
     this.state = {
       newSingTitle:'',
       sings: [
@@ -34,9 +34,10 @@ class App extends Component {
         {sing: 'Về Bên Anh', isListened: false},
         {sing: 'Sóng Gió', isListened: false}
       ],
-      currentColor: RED
+      currentColor: RED,
+      isCollapsed: false
     };
-    
+    //=========================================TrafficLight=============================== 
     setInterval(() =>{
       this.setState({
          currentColor: this.getNextColor(this.state.currentColor)
@@ -53,6 +54,7 @@ class App extends Component {
     }
   }
 
+  // =========================================Sing(todo-list)===============================
   // Cach tu nghi
   // valueClicked(index){
   //   let item = this.state.items.slice();
@@ -96,6 +98,11 @@ class App extends Component {
     this.setState({newSingTitle: event.target.value})
   }
 
+  // =======================================Accordion=================================
+  onAccordionClick(){
+    this.setState({isCollapsed: !this.state.isCollapsed});
+  }
+
   render() {  
     const {currentColor, newSingTitle} = this.state;
     return (
@@ -120,6 +127,9 @@ class App extends Component {
             {this.state.sings.map((item, index) => <TodoItem onclick={this.onSingClick(item)} key = {index} item = {item} />)}
           </div>
 
+          <Accordion heading="Name" onAccordionClick={this.onAccordionClick} isCollapsed = {this.state.isCollapsed}>
+            Nguyen Minh Hieu
+          </Accordion>
         </header>
       </div>
     );
