@@ -49,22 +49,21 @@
 }
 
 .singHeader{
-  text-align: left;
+  display: flex;
   border-bottom: 1px solid cadetblue;
-  padding: 0 0 10px;
+  padding: 5px;
 }
 
 .singHeader i{
   font-size: 24px;
-  padding-left: 12px;
-  padding-right: 4px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .singHeader input{
+  flex-grow: 1;
   font-size: 16px;
   color: whitesmoke;
-  width: 85%;
   border: none;
   outline: none;
   background-color: transparent;

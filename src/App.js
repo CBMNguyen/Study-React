@@ -19,6 +19,7 @@ class App extends Component {
     this.onKeyUp = this.onKeyUp.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onAccordionClick =this.onAccordionClick.bind(this);
+    this.inputElement = React.createRef();
 // ========================================DATA=========================================
     this.menu = [
       {name: "HOME", icon: "zmdi zmdi-home"},
@@ -98,6 +99,11 @@ class App extends Component {
     this.setState({newSingTitle: event.target.value})
   }
 
+
+  componentDidMount(){
+    this.inputElement.current.focus();
+  }
+
   // =======================================Accordion=================================
   onAccordionClick(){
     this.setState({isCollapsed: !this.state.isCollapsed});
@@ -121,7 +127,7 @@ class App extends Component {
           <div className="singHeader">
                     <i className="zmdi zmdi-check-all"></i>
                     <input type="text" value={newSingTitle} placeholder="add to the song" 
-                           onKeyUp={this.onKeyUp} onChange={this.onChange}>
+                           onKeyUp={this.onKeyUp} onChange={this.onChange} ref= {this.inputElement}>
                     </input>
                 </div>
             {this.state.sings.map((item, index) => <TodoItem onclick={this.onSingClick(item)} key = {index} item = {item} />)}
