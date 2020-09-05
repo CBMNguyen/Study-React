@@ -1,4 +1,5 @@
-import React, {Component, Children} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 class Accordion extends Component{
     constructor(props){
         super(props);
@@ -14,5 +15,12 @@ class Accordion extends Component{
         );
     }
 }
+
+Accordion.propTypes={
+    heading: PropTypes.string,
+    children: PropTypes.string,
+    isCollapsed: PropTypes.bool,
+    onAccordionClick: PropTypes.func
+};
 
 export default Accordion;
